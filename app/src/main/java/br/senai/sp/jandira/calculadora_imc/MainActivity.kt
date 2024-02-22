@@ -14,9 +14,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -54,7 +56,7 @@ fun Greeting() {
     Column {
         Row (modifier = Modifier
             .fillMaxWidth()
-            .height(250.dp)
+            .height(240.dp)
             .background(color = Color(0xFFEA1450))
             .padding(20.dp),
             horizontalArrangement = Arrangement.Center,
@@ -76,6 +78,34 @@ fun Greeting() {
                     fontWeight = FontWeight.Black,
                     fontSize = 30.sp
                 )
+            }
+        }
+
+        Column (modifier = Modifier,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ){
+            Card {
+                Column (modifier = Modifier
+                    .height(350.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.SpaceEvenly
+
+                ) {
+                    Text(text = "Seus dados",
+                        color = Color(0xFFEA1450),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 25.sp
+                    )
+
+                    OutlinedTextField(value = "", onValueChange = {})
+                    OutlinedTextField(value = "", onValueChange = {})
+
+                    Button(onClick = { /*TODO*/ }) {
+                        Text(text = "Calcular")
+                    }
+
+                }
+
             }
         }
     }
