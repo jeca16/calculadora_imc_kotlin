@@ -121,7 +121,8 @@ fun Greeting() {
                                 )
                             },
                             shape = RoundedCornerShape(8.dp),
-                            colors = OutlinedTextFieldDefaults.colors(unfocusedBorderColor = Color(0xFFEA1450))
+                            colors = OutlinedTextFieldDefaults.colors(unfocusedBorderColor = Color(0xFFEA1450)),
+                            modifier = Modifier.width(250.dp)
                             )
 
                         Text(text = "sua altura:",
@@ -137,7 +138,8 @@ fun Greeting() {
                             },
                             shape = RoundedCornerShape(8.dp),
                             colors = OutlinedTextFieldDefaults.colors(unfocusedBorderColor = Color(0xFFEA1450)
-                                )
+                                ),
+                            modifier = Modifier.width(250.dp)
                             )
                     }
 
