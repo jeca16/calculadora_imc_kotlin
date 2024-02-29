@@ -121,7 +121,7 @@ fun Greeting() {
                                 )
                             },
                             shape = RoundedCornerShape(8.dp),
-                            colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = Color(0xFFAFA9A9))
+                            colors = OutlinedTextFieldDefaults.colors(unfocusedBorderColor = Color(0xFFEA1450))
                             )
 
                         Text(text = "sua altura:",
@@ -136,7 +136,7 @@ fun Greeting() {
                                 )
                             },
                             shape = RoundedCornerShape(8.dp),
-                            colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = Color(0xFFAFA9A9)
+                            colors = OutlinedTextFieldDefaults.colors(unfocusedBorderColor = Color(0xFFEA1450)
                                 )
                             )
                     }
@@ -145,11 +145,13 @@ fun Greeting() {
                     Button(onClick = { /*TODO*/ },
                         modifier = Modifier
                             .padding(horizontal = 24.dp)
-                            .width(250.dp)
-                            .height(60.dp),
-                        colors = ButtonDefaults.buttonColors(Color(0xFFEA1450))) {
+                            .width(300.dp)
+                            .height(50.dp),
+                        colors = ButtonDefaults.buttonColors(Color(0xFFEA1450)),
+                        shape = RoundedCornerShape(10.dp)
+                    ) {
                         Text(text = "Calcular",
-                            fontSize = 25.sp,
+                            fontSize = 20.sp,
                             fontWeight = FontWeight.Black)
                     }
 
